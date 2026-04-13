@@ -1,0 +1,70 @@
+<h3>-----------------------------------------------------------------------Data Binding:-----------------------------------------------------------------------</h3>
+<table>
+    <tr>
+        <td>
+            <b>One Way Data Binding</b>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td>
+            <b>Interpolation => </b>
+        </td>
+        <td>
+            {{courseName}}
+        </td>
+        <td>
+            {{productPrice}}
+        </td>
+        <td>
+            <input type="text" value="{{courseName}}">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Property Binding => </b>
+        </td>
+        <td>
+            <input type="text" [maxLength]="maxlength" [minLength]="minChar">
+        </td>
+        <td>
+            <input [type]="inputType">
+        </td>
+        <td>
+            <p [class]="myClassName">This is a paragraph with dynamic class</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Event Binding => </b>
+        </td>
+        <td>
+            <button (click)="showWelcomeMessage()">Show Message</button>
+        </td>
+        <td>
+            <button (click)="changeCourseName()">Change Course Name</button>
+        </td>
+        <td>
+            <select (change)="onCityChange()">
+                <option value="">Pune</option>
+                <option value="">Nagpur</option>
+                <option value="">Mumbai</option>
+            </select>
+        </td>
+    </tr>
+    <br><br>
+    <tr>
+        <td>
+            <b>Two Way Data Binding</b>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <td><b>Using NgModel => (To use NgModel we need to import FormsModule in app.config.ts)</b></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" [(ngModel)]="courseName">
+        </td>
+    </tr>
+</table>
