@@ -1,0 +1,73 @@
+<h3>-----------------------------------------------------------------------Control Flow-----------------------------------------------------------------------</h3>
+<table>
+    <tr>
+        <td>
+            @if (isParaVisible === true) {
+                <p>This is sample paragraph for control flow</p>
+            } @else {
+                <h3>isParaVisible is false</h3>
+            }
+        </td>
+        <td>
+            <button (click)="showP()">Show P</button>
+        </td>
+        <td>
+            <button (click)="hideP()">Hide P</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @if (startMonthName == 'jan') {
+                <p>Month is January</p>
+            } @else if (startMonthName == 'feb') {
+                <p>Month is February</p>
+            } @else if (startMonthName == 'mar') {
+                <p>Month is March</p>
+            } @else if (startMonthName == 'apr') {
+                <p>Month is April</p>
+            } @else {
+                <span>Invalid month</span>
+            }
+        </td>
+        <td>
+            <input type="text" [(ngModel)]="startMonthName">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                @for (item of cityList; track $index) {
+                    <li>{{ item }}</li>
+                }
+            </ul>
+        </td>
+        <td>
+            <select name="" id="">
+                @for (item of cityList; track $index) {
+                    <option value="{{ item }}">{{ item }}</option>
+                }
+            </select>
+        </td>
+    </tr>
+</table>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of studentList; track $index) {
+            <tr>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.city }}</td>
+                <td>{{ item.isActive ? 'Active' : 'Inactive' }}</td>
+            </tr>
+        }
+    </tbody>
+</table>
