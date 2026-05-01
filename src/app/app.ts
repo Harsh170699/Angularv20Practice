@@ -1,13 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { Admin } from "./components/admin/admin";
-import { User } from "./components/user/user";
-import { DataBinding } from './components/data-binding/data-binding';
-import { SignalExample } from './components/signal-example/signal-example';
-import { ControlFlow } from './components/control-flow/control-flow';
+import { RouterLink, RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  imports: [Admin, User, DataBinding, SignalExample, ControlFlow],
+  imports: [RouterLink, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
