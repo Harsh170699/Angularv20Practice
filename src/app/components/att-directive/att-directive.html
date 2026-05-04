@@ -20,3 +20,43 @@
         <button class="btn btn-warning" (click)="toggleDiv2Green()">Toggle BG Color</button>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-3">
+        FirstName => {{firstName}}
+        <br>
+        FirstName => {{firstName | uppercase}}
+    </div>
+    <div class="col-3">
+        courseName => {{courseName}}
+        <br>
+        courseName => {{courseName | lowercase}}
+    </div>
+    <div class="col-3">
+        courseName => {{courseName}}
+        <br>
+        courseName => {{courseName | titlecase}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        rollNoList => {{rollNoList}}
+        <br>
+        rollNoList => {{rollNoList | slice:0:5}}
+        <br>
+        rollNoList => {{rollNoList | slice:0}}
+    </div>
+    <div class="col-3">
+        studentObj => {{studentObj}}
+        <br>
+        <!-- Convert the object to JSON string -->
+        studentObj => {{studentObj | json}}
+    </div>
+    <div class="col-3">
+        currentDate => {{currentDate}}
+        <br>
+        currentDate => {{currentDate | date: 'MM/dd/yyyy'}}
+        <br>
+        currentDate => {{currentDate | date: 'dd-MMMM-yy'}}
+    </div>
+</div>
